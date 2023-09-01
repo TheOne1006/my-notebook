@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[2,3]},"content":"图生图","children":[{"type":"heading","depth":1,"payload":{"lines":[4,5]},"content":"提示词反推","children":[{"type":"bullet_list","depth":2,"payload":{"lines":[6,8]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[6,7]},"content":"作用: 提取已上传图片的提示词","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[8,9]},"content":"两种反推方式","children":[{"type":"list_item","depth":3,"payload":{"lines":[10,11]},"content":"<strong>CLIP反推</strong> 提示词：生成自然语言式","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[11,12]},"content":"<strong>DeepBooru反推</strong> 提示词：生成关键词组","children":[]}]}]},{"type":"heading","depth":1,"payload":{"lines":[13,14]},"content":"图片上传区域","children":[{"type":"heading","depth":2,"payload":{"lines":[15,16]},"content":"几种情况使用","children":[{"type":"list_item","depth":3,"payload":{"lines":[17,18]},"content":"图生图时，上传需要重绘的图片","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[18,19]},"content":"进行局部重绘时，涂抹蒙版","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[19,20]},"content":"进行局部重绘(上传蒙版)时，上传原图和蒙版","children":[]}]}]},{"type":"heading","depth":1,"payload":{"lines":[21,22]},"content":"图片生成区域","children":[{"type":"list_item","depth":2,"payload":{"lines":[23,24]},"content":"展示","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[26,27]},"content":"缩放模式 Resize mode","children":[{"type":"list_item","depth":2,"payload":{"lines":[28,29]},"content":"作用:原图的和生成图尺寸不一样，将采取选择的缩放","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[29,30]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[29,30],"index":1},"content":"1. 拉伸(Just resize)","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[30,31]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[30,31],"index":2},"content":"2. 裁剪（Crop and resize）:多余的部分剪掉","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[31,32]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[31,32],"index":3},"content":"3. 填充（Resize and fill）:类似ps的图片扩展","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[32,34]},"content":"","children":[{"type":"list_item","depth":3,"payload":{"lines":[32,33],"index":4},"content":"4. 直接缩放: 第一个拉伸类似","children":[]}]}]},{"type":"heading","depth":1,"payload":{"lines":[34,35]},"content":"Resize to 和 Resize by","children":[{"type":"list_item","depth":2,"payload":{"lines":[36,37]},"content":"Resize to: 缩放至 xxx * xxx","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[37,38]},"content":"resize by: 指的是把图片缩放多少倍","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[40,41]},"content":"提示词相关性 CFG Scale","children":[{"type":"list_item","depth":2,"payload":{"lines":[42,43]},"content":"生成的内容多大程度和提示词相关，一般填7左右","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[45,46]},"content":"重绘幅度 Denosing","children":[{"type":"list_item","depth":2,"payload":{"lines":[47,48]},"content":"重绘幅度是文生图最重要的参数了，","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[48,49]},"content":"改变多少原图","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[49,50]},"content":"范围从0-1，如0.1会对图片细节进行修改，0.7以上会对图片进行大幅度重绘","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[53,54]},"content":"局部重绘特有参数","children":[{"type":"heading","depth":2,"payload":{"lines":[56,57]},"content":"蒙版模糊 Mask blur","children":[{"type":"list_item","depth":3,"payload":{"lines":[58,59]},"content":"蒙版模糊就是将我们涂抹区域，从边缘向中间和向外透明过渡","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[59,60]},"content":"高斯模糊的程度","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[60,61]},"content":"值越大，可见的重绘范围越小，如果大于我们涂抹的范围，则重绘完全消失（透明）","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[62,63]},"content":"蒙版透明 Mask transparency","children":[{"type":"list_item","depth":3,"payload":{"lines":[64,65]},"content":"蒙版透明是在蒙版上加个透明效果","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[66,67]},"content":"蒙版模式 Mask mode","children":[{"type":"list_item","depth":3,"payload":{"lines":[68,69]},"content":"","children":[{"type":"list_item","depth":4,"payload":{"lines":[68,69],"index":1},"content":"1. 重绘蒙版内容","children":[]}]},{"type":"list_item","depth":3,"payload":{"lines":[69,71]},"content":"","children":[{"type":"list_item","depth":4,"payload":{"lines":[69,70],"index":2},"content":"2. 重绘非蒙版内容","children":[]}]}]},{"type":"heading","depth":2,"payload":{"lines":[71,72]},"content":"蒙住的内容 Masked Content","children":[{"type":"list_item","depth":3,"payload":{"lines":[73,74]},"content":"填充 fill","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[74,75]},"content":"原图 original","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[75,76]},"content":"latent noise（潜在噪声）是指在生成图像时添加到模型输入中的随机噪声.","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[76,77]},"content":"latent nothing 潜在噪声为空","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[78,79]},"content":"重绘区域 Inpaint Area","children":[{"type":"list_item","depth":3,"payload":{"lines":[80,81]},"content":"全图","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[81,82]},"content":"局部","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[83,84]},"content":"仅蒙版模式的边缘预留像素","children":[{"type":"list_item","depth":3,"payload":{"lines":[85,86]},"content":"就是扩大我们的蒙版区域，将一部分原图的内容放到蒙版里。当然这部分内容也不会被重绘，只是一个参考项","children":[]}]}]}]},{"colorFreezeLevel":2})</script>
+</body>
+</html>
