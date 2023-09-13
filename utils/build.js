@@ -14,8 +14,6 @@ const buildOps = [
   },
 ];
 
-
-
 function resetTarget(targetPath) {
 
     try {

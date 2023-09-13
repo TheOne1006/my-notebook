@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script><script>(r => {
+          setTimeout(r);
+        })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"LoRA","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4]},"content":"概念","children":[{"type":"heading","depth":2,"payload":{"lines":[5,6]},"content":"Low-Rank Adaptation（低秩适用）","children":[{"type":"list_item","depth":3,"payload":{"lines":[7,8]},"content":"一种微调扩散模型的方式","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[8,9]},"content":"意义：降低训练门槛、扩宽了产出的使用模型","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[9,10]},"content":"与 Dreambooth 方式的区别？","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[10,11]},"content":"搭配 checkpoint 使用","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[12,13]},"content":"models/Lora 目录","children":[]},{"type":"heading","depth":2,"payload":{"lines":[17,18]},"content":"功能","children":[{"type":"list_item","depth":3,"payload":{"lines":[19,20]},"content":"特定形象的描摹","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[20,21]},"content":"对特定视觉风格的实现","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[21,22]},"content":"某种特点元素 容易画面, (eg: 服饰、姿势)","children":[]}]}]},{"type":"heading","depth":1,"payload":{"lines":[23,24]},"content":"下载的地址","children":[]},{"type":"heading","depth":1,"payload":{"lines":[26,27]},"content":"三种方式调用 LoRa","children":[{"type":"heading","depth":2,"payload":{"lines":[28,29]},"content":"方法一 提示词","children":[{"type":"list_item","depth":3,"payload":{"lines":[30,31]},"content":"尖括号<code>&lt;&gt;</code> + <code>Lora</code> + 文件名 + 权重","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[31,32]},"content":"eg: <code>&lt;Lora:KeQing3in1:0.5&gt;</code>","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[33,34]},"content":"方法二 附加模型选单","children":[{"type":"list_item","depth":3,"payload":{"lines":[35,36]},"content":"选项 -&gt; Lora 点击选中目标模型","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[37,38]},"content":"方法三 Additional Networks","children":[{"type":"list_item","depth":3,"payload":{"lines":[39,40]},"content":"需要扩展: Koohya-ss Additional Networks","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[40,41]},"content":"x生图 - 可折叠选单","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[41,42]},"content":"文件地址：不同于之前，在 models/Lora 中，需要将其添加到配置中","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[42,43]},"content":"支持最多 5 个","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[45,46]},"content":"一般权重 0~1","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[48,49]},"content":"LoRA 的应用方向","children":[{"type":"heading","depth":2,"payload":{"lines":[51,52]},"content":"人物形象 Character","children":[{"type":"list_item","depth":3,"payload":{"lines":[53,54]},"content":"赛博 coser = 真实系大模型 + 角色 LoRA","children":[]}]},{"type":"heading","depth":2,"payload":{"lines":[55,56]},"content":"画风 Style","children":[]},{"type":"heading","depth":2,"payload":{"lines":[56,57]},"content":"概念 Concept","children":[]},{"type":"heading","depth":2,"payload":{"lines":[57,58]},"content":"服饰 Cloth/Costume","children":[]},{"type":"heading","depth":2,"payload":{"lines":[58,59]},"content":"物体、特定元素 Object","children":[]}]}]},null)</script>
+</body>
+</html>
