@@ -1,5 +1,6 @@
 # 个人笔记
 
+[TOC]
 
 ## stable-diffusion
 
