@@ -41,7 +41,7 @@ function createMarkmap(source, targetPath) {
     const targetFile = `${targetPath}/${fileName}.html`;
 
     exec(
-      `node_modules/.bin/markmap --no-open --output ${targetFile}  ${filePath} `,
+      `node_modules/.bin/markmap --no-open --no-toolbar --output ${targetFile}  ${filePath} `,
       {},
       (error, stdout, stderr) => {
         if (error) {

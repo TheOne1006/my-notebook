@@ -16,23 +16,11 @@
   height: 100vh;
 }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.4/dist/index.js"></script><script>(r => {
-          setTimeout(r);
-        })(() => {
-  const {
-    markmap,
-    mm
-  } = window;
-  const toolbar = new markmap.Toolbar();
-  toolbar.attach(mm);
-  const el = toolbar.render();
-  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
-  document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root, jsonOptions) => {
           const markmap = getMarkmap();
           window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
         })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[1,2]},"content":"扩展","children":[{"type":"heading","depth":1,"payload":{"lines":[3,4]},"content":"扩展的概念","children":[]},{"type":"heading","depth":1,"payload":{"lines":[6,7]},"content":"三种安装方式","children":[{"type":"list_item","depth":2,"payload":{"lines":[8,9]},"content":"webui 列表","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[9,10]},"content":"url 下载","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[10,11]},"content":"extensions 文件夹,","children":[{"type":"list_item","depth":3,"payload":{"lines":[11,12]},"content":"使用 git 下载（一般都在github 上）","children":[]}]}]},{"type":"heading","depth":1,"payload":{"lines":[14,15]},"content":"基础扩展: 初学者补全","children":[{"type":"list_item","depth":2,"payload":{"lines":[16,17]},"content":"中文语言包","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[17,18]},"content":"Image Browser: 图库浏览器","children":[{"type":"list_item","depth":3,"payload":{"lines":[18,19]},"content":"基本操作: 收藏、删除、筛序","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[19,20]},"content":"Tag Autocompletion: 提示词补全、翻译","children":[{"type":"list_item","depth":3,"payload":{"lines":[20,21]},"content":"转换成 SD 可理解的词组","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[21,22]},"content":"基于 Booru 词库","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[22,23]},"content":"下载中文词库","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[23,24]},"content":"Tagger：提示词 高效精准反推","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[26,27]},"content":"进阶扩展: 熟练后的扩展","children":[{"type":"list_item","depth":2,"payload":{"lines":[28,29]},"content":"Ultimate SD Upscale: 图生图 放大脚本的替代","children":[{"type":"list_item","depth":3,"payload":{"lines":[29,30]},"content":"<code>https://github.com/Coyote-A/ultimate-upscale-for-automatic1111</code>","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[30,31]},"content":"Local Latent Couple(LLul): 局部细节添加","children":[{"type":"list_item","depth":3,"payload":{"lines":[31,32]},"content":"<pre><code class=\"language-git clone --depth 1 https://github.com/hnmr293/sd-webui-llul\"></code></pre>\n","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[33,34]},"content":"Cutoff: 提示词描述成分分离控制","children":[{"type":"list_item","depth":3,"payload":{"lines":[34,35]},"content":"提示词混杂时使用","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[35,36]},"content":"精确控制 衣服、帽子、头发颜色","children":[]},{"type":"list_item","depth":3,"payload":{"lines":[36,38]},"content":"<code>git clone --depth 1 https://github.com/hnmr293/sd-webui-cutoff.git</code><br>\n<img src=\"https://github.com/hnmr293/sd-webui-cutoff/raw/main/images/cover.jpg\" alt=\"img\">","children":[]}]},{"type":"list_item","depth":2,"payload":{"lines":[38,39]},"content":"Infiniite Zoom: 趣味无限缩放视频","children":[{"type":"list_item","depth":3,"payload":{"lines":[39,40]},"content":"<code>git clone --depth 1 https://github.com/v8hid/infinite-zoom-automatic1111-webui.git</code>","children":[]}]}]}]},{"colorFreezeLevel":3})</script>
