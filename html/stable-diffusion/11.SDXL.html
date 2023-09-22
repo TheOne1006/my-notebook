@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+          const markmap = getMarkmap();
+          window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+        })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[2,3]},"content":"SDXL","children":[{"type":"heading","depth":1,"payload":{"lines":[4,5]},"content":"是什么?","children":[{"type":"list_item","depth":2,"payload":{"lines":[6,7]},"content":"最新开发的大模型","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[9,10]},"content":"有什么不一样 ？","children":[{"type":"list_item","depth":2,"payload":{"lines":[11,12]},"content":"对提示词包容度非常高，减少咒语","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[12,13]},"content":"词条 -&gt; 口语化，用嘴出图","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[13,14]},"content":"初始分辨率提升","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[14,15]},"content":"Refiner，精加工","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[15,16]},"content":"能写字","children":[]},{"type":"list_item","depth":2,"payload":{"lines":[16,19]},"content":"","children":[]}]},{"type":"heading","depth":1,"payload":{"lines":[19,20]},"content":"","children":[]}]},{"colorFreezeLevel":3})</script>
+</body>
+</html>
