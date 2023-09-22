@@ -9,8 +9,8 @@ const path = require("path");
  */
 const buildOps = [
   {
-    source: "./stable-diffusion/*.md",
-    target: "./stable-diffusion/html",
+    source: "./stable-diffusion-webui/*.md",
+    target: "./html/stable-diffusion/",
   },
 ];
 

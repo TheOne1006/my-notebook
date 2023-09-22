@@ -1,8 +1,11 @@
 # set -e
 
 #File: tree-md
-markdown=$(cd "$1" && tree -L 3  -tf --noreport -I "readme.md|node_modules|.git|coverage|js|sh" -P "*.png|*.html" --charset C -N  --sort=name . |
-      sed \
+# 使用 tree 并 转换为 markdown 格式
+
+
+markdown=$(cd "$1" && tree -L 3  -tf --noreport -I "readme.md|node_modules|.git|coverage" -P "*.md" --charset ASCII  --sort=name . |
+       LC_ALL=C sed \
       -e '/^$/d' \
       -e 's/`/|/g' \
       -e 's/    |/|   |/g' \
@@ -12,6 +15,6 @@ markdown=$(cd "$1" && tree -L 3  -tf --noreport -I "readme.md|node_modules|.git|
       -e 's/\.md]/]/g' |
     tail -n +2)
 
-# sed 转成utf8
+
 
 printf "%s\n" "$markdown" 
