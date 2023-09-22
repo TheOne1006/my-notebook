@@ -19,28 +19,4 @@
 
 ## 目录结构
 
-```
-├── ./stable-diffusion
-│   ├── ./stable-diffusion/文生图.md
-│   ├── ./stable-diffusion/02.提示词.md
-│   ├── ./stable-diffusion/提升分辨率.md
-│   ├── ./stable-diffusion/扩展.md
-│   ├── ./stable-diffusion/LoRA.md
-│   ├── ./stable-diffusion/03.图生图.md
-│   ├── ./stable-diffusion/04.模型.md
-│   ├── ./stable-diffusion/10.ControlNet.md
-│   ├── ./stable-diffusion/用法.md
-│   ├── ./stable-diffusion/出图参数.md
-│   └── ./stable-diffusion/html
-│       ├── ./stable-diffusion/html/02.提示词.html
-│       ├── ./stable-diffusion/html/03.图生图.html
-│       ├── ./stable-diffusion/html/04.模型.html
-│       ├── ./stable-diffusion/html/10.ControlNet.html
-│       ├── ./stable-diffusion/html/LoRA.html
-│       ├── ./stable-diffusion/html/扩展.html
-│       ├── ./stable-diffusion/html/用法.html
-│       ├── ./stable-diffusion/html/文生图.html
-│       ├── ./stable-diffusion/html/出图参数.html
-│       └── ./stable-diffusion/html/提升分辨率.html
-└── ./README.md
-```
+[tree](./tree.md)

@@ -16,5 +16,8 @@
     - [出图参数.html](./html/stable-diffusion/出图参数.html)
     - [提升分辨率.html](./html/stable-diffusion/提升分辨率.html)
 - [res](./res)
+  - [stable-diffusion](./res/stable-diffusion)
+- [stable-diffusion](./stable-diffusion)
+  - [framework.png](./stable-diffusion/framework.png)
 - [stable-diffusion-webui](./stable-diffusion-webui)
 - [utils](./utils)
